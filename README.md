@@ -52,9 +52,7 @@ Caso de uso de usuario (interacción directa con la aplicación).
 ### **8. Garantía de Éxito**  
 - Se mostrará el resultado correctamente calculado usando la fórmula:  
 
-  \[
-  IMC = \frac{\text{masa (kg)}}{\text{altura}^2 (\text{m}^2)}
-  \]
+ **IMC = masa (kg) / altura² (m²)**
 
 - Se proporcionará una clasificación basada en el IMC:  
   - **Menos de 18.5**: Bajo peso  
@@ -62,7 +60,7 @@ Caso de uso de usuario (interacción directa con la aplicación).
   - **25 - 29.9**: Pre-obesidad o Sobrepeso  
   - **30 o más**: Obesidad
 
-[Fuente:](https://www.enterat.com/salud/imc-indice-masa-corporal.php)
+Fuente: *[https://www.enterat.com/salud/imc-indice-masa-corporal.php](https://www.enterat.com/salud/imc-indice-masa-corporal.php)*
 
 ### **9. Escenario Principal**  
 1. El usuario abre la aplicación.  
