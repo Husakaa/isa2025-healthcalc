@@ -9,9 +9,9 @@
 
 **Definicion:** La funcion calcula correctamente el peso ideal segun la altura y el genero.
 
-**Formula utilizada:** *Lorentz*
-**Hombres:** Peso ideal = (altura - 100) - ((altura - 150) / 4)
-**Mujeres:** Peso ideal = (altura - 100) - ((altura - 150) / 2.5)
+**Formula utilizada:** *Lorentz*  
+**Hombres:** Peso ideal = (altura - 100) - ((altura - 150) / 4)  
+**Mujeres:** Peso ideal = (altura - 100) - ((altura - 150) / 2.5)  
 
 **Restriccion:** Solo valido para alturas mayores a 100 cm y menores a 250 cm. Fuera del rango, se muestra una advertencia.
 
@@ -33,9 +33,9 @@
 
 **Definicion** La funcion calcula correctamente la tasa metabolica basal segun el peso, altura, edad y genero.
 
-**Formula utilizada:** *Harris-Benedict*
-**Hombres:** 88.36 + (13.4 x peso) + (4.8 x altura) - (5.7 x edad)
-**Mujeres:** 447.6 + (9.2 x peso) + (3.1 x altura) - (4.3 x edad)
+**Formula utilizada:** *Harris-Benedict*  
+**Hombres:** 88.36 + (13.4 x peso) + (4.8 x altura) - (5.7 x edad)  
+**Mujeres:** 447.6 + (9.2 x peso) + (3.1 x altura) - (4.3 x edad)  
 
 **Restriccion:** Solo valido para alturas mayores a 100 cm y menores a 250 cm, pesos mayores a 3 kg y menores a 300 kg, edades mayores a 1 año y menores a 120 años.
 
