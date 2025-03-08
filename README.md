@@ -61,4 +61,8 @@
 
 ## Resultados Maven
 A continuacion se muestra una captura de pantalla de informe surefire generado al ejecutar los tests con Maven:
-![Captura cmd](project-healthcalc\target\surefire-reports\captura_tests_xml.png)
+![Captura cmd](capturas\captura_tests_xml.png)
+
+## Seguimiento con gitk
+A continuacion se muestra una captura de pantalla del seguimiento realizado por gitk sobre el repositorio:
+![Captura gitk](capturas\captura_gitk.png)
