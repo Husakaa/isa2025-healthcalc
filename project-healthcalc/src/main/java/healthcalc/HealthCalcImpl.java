@@ -1,9 +1,11 @@
+package healthcalc;
+
 public class HealthCalcImpl implements HealthCalc {
 
     @Override
     public float idealWeight(int height, char gender) throws Exception {
         // Validar altura
-        if (height < 100 || height > 250) {
+        if (height <= 100 || height >= 250) {
             throw new IllegalArgumentException("La altura debe estar entre 100 cm y 250 cm.");
         }
 
@@ -23,17 +25,17 @@ public class HealthCalcImpl implements HealthCalc {
     @Override
     public float basalMetabolicRate(float weight, int height, int age, char gender) throws Exception {
         // Validar peso
-        if (weight < 3 || weight > 300) {
+        if (weight <= 3 || weight >= 300) {
             throw new IllegalArgumentException("El peso debe estar entre 3 kg y 300 kg.");
         }
 
         // Validar altura
-        if (height < 100 || height > 250) {
+        if (height <= 100 || height >= 250) {
             throw new IllegalArgumentException("La altura debe estar entre 100 cm y 250 cm.");
         }
 
         // Validar edad
-        if (age < 1 || age > 120) {
+        if (age <= 1 || age >= 120) {
             throw new IllegalArgumentException("La edad debe estar entre 1 y 120 años.");
         }
 
