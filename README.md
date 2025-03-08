@@ -58,3 +58,7 @@
 **Caso 12:** Se introduce un genero desconocido o erroneo (ej. **X**) -> Se espera un error o uso de un valor por defecto.  
 
 ---
+
+## Resultados Maven
+A continuacion se muestra una captura de pantalla de informe surefire generado al ejecutar los tests con Maven:
+![Captura cmd](project-healthcalc\target\surefire-reports\captura_tests_xml.png)
