@@ -44,7 +44,7 @@ Feature: Ideal Weight Computation
    
   @tag3
   Scenario: Out of range height
-    Given I have a factorial calculator
+    Given I have a health calculator
 	And a height of 300 cm
 	And a male gender
     When I compute the ideal weight
