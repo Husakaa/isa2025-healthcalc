@@ -83,4 +83,16 @@ public void the_system_returns_kg(double expectedWeight) {
     Assertions.assertEquals(expectedWeight, idealWeight, 0.1, "The calculated ideal weight is incorrect.");
 }
 
+@Given("a negative height {int} cm")
+public void a_negative_height_cm(int  height) {
+    this.height = height; 
+}
+
+@Then("The system throws an error of invalid parameter")
+public void the_system_throws_an_error_of_invalid_parameter() {
+    Assertions.assertTrue(raiseException, "La altura debe estar entre 100 cm y 250 cm.");
+}
+
+
+
 }
