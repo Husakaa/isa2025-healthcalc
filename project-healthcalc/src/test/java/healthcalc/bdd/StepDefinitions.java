@@ -52,6 +52,11 @@ public class StepDefinitions {
 	public void a_female_gender() {
 		this.gender = 'F';
 }
+
+	@Given("an unknown gender")
+	public void an_unknown_gender() {
+    	this.gender = 'X'; 
+}
     
     @When("I compute the basal metabolic rate")
     public void i_compute_the_basal_metabolic_rate() {
@@ -77,22 +82,23 @@ public class StepDefinitions {
     }
 }
 
-@Then("The system returns {double} kg")
-public void the_system_returns_kg(double expectedWeight) {
-    Assertions.assertFalse(raiseException, "An exception was raised during ideal weight calculation.");
-    Assertions.assertEquals(expectedWeight, idealWeight, 0.1, "The calculated ideal weight is incorrect.");
-}
+	@Then("The system returns {double} kg")
+	public void the_system_returns_kg(double expectedWeight) {
+		Assertions.assertFalse(raiseException, "An exception was raised during ideal weight calculation.");
+		Assertions.assertEquals(expectedWeight, idealWeight, 0.1, "The calculated ideal weight is incorrect.");
+	}
 
-@Given("a negative height {int} cm")
-public void a_negative_height_cm(int  height) {
-    this.height = height; 
-}
+	@Given("a negative height {int} cm")
+	public void a_negative_height_cm(int  height) {
+		this.height = height; 
+	}
 
-@Then("The system throws an error of invalid parameter")
-public void the_system_throws_an_error_of_invalid_parameter() {
-    Assertions.assertTrue(raiseException, "Invalid parameter error");
-}
+	@Then("The system throws an error of invalid parameter")
+	public void the_system_throws_an_error_of_invalid_parameter() {
+		Assertions.assertTrue(raiseException, "Invalid parameter error");
+	}
 
+	
 
 
 }

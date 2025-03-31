@@ -1,87 +1,10 @@
-#Author: hugosalascalderon@gmail.com
-
-@tag
-Feature: Ideal Weight Computation
-  As a user I want to compute my ideal weight so that to be aware about my health condition
-
-  @tag1
-  Scenario: Computing my ideal weight
-    Given I have a health calculator
-	And a height of 165 cm
-	And a female gender
-    When I compute the ideal weight
-    Then The system returns 59.00 kg
-
-    Examples:
-      | height |  gender |  Ideal Weight   |
-      |  175   |   'M'   |      68.75      |
-      |  160   |   'F'   |      56.00      |
-      |  180   |   'M'   |      72.50      |
-      |  165   |   'F'   |      59.00      |
-      |  170   |   'M'   |      66.25      |
-      |  155   |   'F'   |      53.00      |
-
-
-
-  @tag2
-  Scenario: Negative height
-    Given I have a health calculator
-	And a negative height -170 cm
-	And a male gender
-    When I compute the ideal weight
-    Then The system throws an error of invalid parameter
-
-
-    Examples:
-      | height  |  gender | 
-      |  -175   |   'M'   |        
-      |  -160   |   'F'   |       
-      |  -180   |   'M'   |    
-      |  -165   |   'F'   |    
-      |  -170   |   'M'   | 
-      |  -155   |   'F'   |
-
-   
-  @tag3
-  Scenario: Out of range height
-    Given I have a health calculator
-	And a height of 300 cm
-	And a male gender
-    When I compute the ideal weight
-    Then The system throws an error of invalid parameter
-
-
-    Examples:
-      | height |  gender | 
-      |  300   |   'M'   |        
-      |  100   |   'M'   |       
-      |  300   |   'F'   |    
-      |  100   |   'F'   |    
-         
-   	
-
-  @tag4
-  Scenario Outline: Unknown gender
-    Given I have a health calculator
-	And a height of 170 cm
-	And an unknown gender
-    When I compute the ideal weight
-    Then The system throws an error of invalid parameter
-   
-    Examples: 
-      | height | gender |
-      |  170   |   'X'  |
-      |  150   |   'W'  |   
-      |  180   |   'Y'  | 
-      
-
 @tag
 Feature: Basal metabolic ratio computation
   As a user I want to compute my basal metabolic ratio to know how many calories my body needs at rest and thus better manage my diet and physical condition.
 
 
 @tag1
-Scenario: Basal metabolic ratio computation
+Scenario Outline: Basal metabolic ratio computation
   Given I have a health calculator
       And a weight of 70 kg
       And a height of 175 cm
@@ -99,7 +22,7 @@ Scenario: Basal metabolic ratio computation
 
 
 @tag2
-Scenario: Out of range weight
+Scenario Outline: Out of range weight
   Given I have a health calculator
       And a weight of 300 kg
       And a height of 175 cm
@@ -113,9 +36,8 @@ Scenario: Out of range weight
     |   300  |  175   | 30  |   'M'  |
     |    3   |  160   | 25  |   'F'  |
 
-
 @tag3
-Scenario: Out of range height 
+Scenario Outline: Out of range height 
   Given I have a health calculator
       And a weight of 70 kg
       And a height of 100 cm
@@ -131,7 +53,7 @@ Scenario: Out of range height
 
 
 @tag4
-Scenario: Out of range age 
+Scenario Outline: Out of range age 
   Given I have a health calculator
       And a weight of 70 kg
       And a height of 175 cm
@@ -146,27 +68,21 @@ Scenario: Out of range age
     |   60   |  160   | 120 |   'F'  |
     |   80   |  180   | -5  |   'M'  |
 
-
 @tag5
-Scenario: Unknown gender
+Scenario Outline: Unknown gender
   Given I have a health calculator
       And a weight of 70 kg
       And a height of 175 cm
       And an age of 30 years
       And an unknown gender
   When I compute the basal metabolic rate
-  Then The system raises an invalid parameter error
+  Then The system throws an error of invalid parameter
 
   Examples:
     | weight | height | age | gender |
     |   70   |  175   | 30  |   'X'  |
     |   65   |  160   | 28  |   'W'  |
     |   80   |  180   | 35  |   'Y'  |
-
-
-
-
-
 
 
 

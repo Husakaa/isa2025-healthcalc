@@ -41,7 +41,7 @@ Feature: Ideal Weight Computation
 
 @tag3
   Scenario Outline: Out of range height
-    Given I have a factorial calculator
+    Given I have a health calculator
 	And a height of 300 cm
 	And a male gender
     When I compute the ideal weight
@@ -53,7 +53,22 @@ Feature: Ideal Weight Computation
       |  300   |   'M'   |        
       |  100   |   'M'   |       
       |  300   |   'F'   |    
-      |  100   |   'F'   |    
+      |  100   |   'F'   | 
+
+
+@tag4
+  Scenario Outline: Unknown gender
+    Given I have a health calculator
+	And a height of 170 cm
+	And an unknown gender
+    When I compute the ideal weight
+    Then The system throws an error of invalid parameter
+   
+    Examples: 
+      | height | gender |
+      |  170   |   'X'  |
+      |  150   |   'W'  |   
+      |  180   |   'Y'  |   
          
 
 
