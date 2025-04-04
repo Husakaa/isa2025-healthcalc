@@ -1,0 +1,332 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------------< healthcalc:HealthCalc >------------------------
+[INFO] Building project-healthcalc 1.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ HealthCalc ---
+[INFO] skip non existing resourceDirectory C:\Users\Asus\Desktop\Ing. Salud\3º Carrera\Ingenieria del Software Avanzada\isa2025-healthcalc\project-healthcalc\src\main\resources
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ HealthCalc ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ HealthCalc ---
+[INFO] Copying 2 resources from src\test\resources to target\test-classes
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ HealthCalc ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- surefire:3.0.0-M7:test (default-test) @ HealthCalc ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running healthcalc.bdd.RunCucumberTest
+
+@tag @tag1
+Scenario Outline: Basal metabolic ratio computation # healthcalc/BasalMetabolicRate.feature:18
+  Given I have a health calculator                  # healthcalc.bdd.StepDefinitions.i_have_a_health_calculator()
+  And a weight of 70 kg                             # healthcalc.bdd.StepDefinitions.a_weight_of_kg(float)
+  And a height of 175 cm                            # healthcalc.bdd.StepDefinitions.a_height_of_cm(int)
+  And an age of 30 years                            # healthcalc.bdd.StepDefinitions.an_age_of_years(int)
+  And a male gender                                 # healthcalc.bdd.StepDefinitions.a_male_gender()
+  When I compute the basal metabolic rate           # healthcalc.bdd.StepDefinitions.i_compute_the_basal_metabolic_rate()
+  Then The system returns 1695.36 kcal/day          # healthcalc.bdd.StepDefinitions.the_system_returns_kcal_day(double)
+
+@tag @tag1
+Scenario Outline: Basal metabolic ratio computation # healthcalc/BasalMetabolicRate.feature:19
+  Given I have a health calculator                  # healthcalc.bdd.StepDefinitions.i_have_a_health_calculator()
+  And a weight of 70 kg                             # healthcalc.bdd.StepDefinitions.a_weight_of_kg(float)
+  And a height of 175 cm                            # healthcalc.bdd.StepDefinitions.a_height_of_cm(int)
+  And an age of 30 years                            # healthcalc.bdd.StepDefinitions.an_age_of_years(int)
+  And a male gender                                 # healthcalc.bdd.StepDefinitions.a_male_gender()
+  When I compute the basal metabolic rate           # healthcalc.bdd.StepDefinitions.i_compute_the_basal_metabolic_rate()
+  Then The system returns 1695.36 kcal/day          # healthcalc.bdd.StepDefinitions.the_system_returns_kcal_day(double)
+
+@tag @tag1
+Scenario Outline: Basal metabolic ratio computation # healthcalc/BasalMetabolicRate.feature:20
+  Given I have a health calculator                  # healthcalc.bdd.StepDefinitions.i_have_a_health_calculator()
+  And a weight of 70 kg                             # healthcalc.bdd.StepDefinitions.a_weight_of_kg(float)
+  And a height of 175 cm                            # healthcalc.bdd.StepDefinitions.a_height_of_cm(int)
+  And an age of 30 years                            # healthcalc.bdd.StepDefinitions.an_age_of_years(int)
+  And a male gender                                 # healthcalc.bdd.StepDefinitions.a_male_gender()
+  When I compute the basal metabolic rate           # healthcalc.bdd.StepDefinitions.i_compute_the_basal_metabolic_rate()
+  Then The system returns 1695.36 kcal/day          # healthcalc.bdd.StepDefinitions.the_system_returns_kcal_day(double)
+
+@tag @tag1
+Scenario Outline: Basal metabolic ratio computation # healthcalc/BasalMetabolicRate.feature:21
+  Given I have a health calculator                  # healthcalc.bdd.StepDefinitions.i_have_a_health_calculator()
+  And a weight of 70 kg                             # healthcalc.bdd.StepDefinitions.a_weight_of_kg(float)
+  And a height of 175 cm                            # healthcalc.bdd.StepDefinitions.a_height_of_cm(int)
+  And an age of 30 years                            # healthcalc.bdd.StepDefinitions.an_age_of_years(int)
+  And a male gender                                 # healthcalc.bdd.StepDefinitions.a_male_gender()
+  When I compute the basal metabolic rate           # healthcalc.bdd.StepDefinitions.i_compute_the_basal_metabolic_rate()
+  Then The system returns 1695.36 kcal/day          # healthcalc.bdd.StepDefinitions.the_system_returns_kcal_day(double)
+
+@tag @tag2
+Scenario Outline: Out of range weight                  # healthcalc/BasalMetabolicRate.feature:36
+  Given I have a health calculator                     # healthcalc.bdd.StepDefinitions.i_have_a_health_calculator()
+  And a weight of 300 kg                               # healthcalc.bdd.StepDefinitions.a_weight_of_kg(float)
+  And a height of 175 cm                               # healthcalc.bdd.StepDefinitions.a_height_of_cm(int)
+  And an age of 30 years                               # healthcalc.bdd.StepDefinitions.an_age_of_years(int)
+  And a male gender                                    # healthcalc.bdd.StepDefinitions.a_male_gender()
+  When I compute the basal metabolic rate              # healthcalc.bdd.StepDefinitions.i_compute_the_basal_metabolic_rate()
+  Then The system throws an error of invalid parameter # healthcalc.bdd.StepDefinitions.the_system_throws_an_error_of_invalid_parameter()
+
+@tag @tag2
+Scenario Outline: Out of range weight                  # healthcalc/BasalMetabolicRate.feature:37
+  Given I have a health calculator                     # healthcalc.bdd.StepDefinitions.i_have_a_health_calculator()
+  And a weight of 300 kg                               # healthcalc.bdd.StepDefinitions.a_weight_of_kg(float)
+  And a height of 175 cm                               # healthcalc.bdd.StepDefinitions.a_height_of_cm(int)
+  And an age of 30 years                               # healthcalc.bdd.StepDefinitions.an_age_of_years(int)
+  And a male gender                                    # healthcalc.bdd.StepDefinitions.a_male_gender()
+  When I compute the basal metabolic rate              # healthcalc.bdd.StepDefinitions.i_compute_the_basal_metabolic_rate()
+  Then The system throws an error of invalid parameter # healthcalc.bdd.StepDefinitions.the_system_throws_an_error_of_invalid_parameter()
+
+@tag @tag3
+Scenario Outline: Out of range height                  # healthcalc/BasalMetabolicRate.feature:51
+  Given I have a health calculator                     # healthcalc.bdd.StepDefinitions.i_have_a_health_calculator()
+  And a weight of 70 kg                                # healthcalc.bdd.StepDefinitions.a_weight_of_kg(float)
+  And a height of 100 cm                               # healthcalc.bdd.StepDefinitions.a_height_of_cm(int)
+  And an age of 30 years                               # healthcalc.bdd.StepDefinitions.an_age_of_years(int)
+  And a male gender                                    # healthcalc.bdd.StepDefinitions.a_male_gender()
+  When I compute the basal metabolic rate              # healthcalc.bdd.StepDefinitions.i_compute_the_basal_metabolic_rate()
+  Then The system throws an error of invalid parameter # healthcalc.bdd.StepDefinitions.the_system_throws_an_error_of_invalid_parameter()
+
+@tag @tag3
+Scenario Outline: Out of range height                  # healthcalc/BasalMetabolicRate.feature:52
+  Given I have a health calculator                     # healthcalc.bdd.StepDefinitions.i_have_a_health_calculator()
+  And a weight of 70 kg                                # healthcalc.bdd.StepDefinitions.a_weight_of_kg(float)
+  And a height of 100 cm                               # healthcalc.bdd.StepDefinitions.a_height_of_cm(int)
+  And an age of 30 years                               # healthcalc.bdd.StepDefinitions.an_age_of_years(int)
+  And a male gender                                    # healthcalc.bdd.StepDefinitions.a_male_gender()
+  When I compute the basal metabolic rate              # healthcalc.bdd.StepDefinitions.i_compute_the_basal_metabolic_rate()
+  Then The system throws an error of invalid parameter # healthcalc.bdd.StepDefinitions.the_system_throws_an_error_of_invalid_parameter()
+
+@tag @tag4
+Scenario Outline: Out of range age                     # healthcalc/BasalMetabolicRate.feature:67
+  Given I have a health calculator                     # healthcalc.bdd.StepDefinitions.i_have_a_health_calculator()
+  And a weight of 70 kg                                # healthcalc.bdd.StepDefinitions.a_weight_of_kg(float)
+  And a height of 175 cm                               # healthcalc.bdd.StepDefinitions.a_height_of_cm(int)
+  And an age of 120 years                              # healthcalc.bdd.StepDefinitions.an_age_of_years(int)
+  And a male gender                                    # healthcalc.bdd.StepDefinitions.a_male_gender()
+  When I compute the basal metabolic rate              # healthcalc.bdd.StepDefinitions.i_compute_the_basal_metabolic_rate()
+  Then The system throws an error of invalid parameter # healthcalc.bdd.StepDefinitions.the_system_throws_an_error_of_invalid_parameter()
+
+@tag @tag4
+Scenario Outline: Out of range age                     # healthcalc/BasalMetabolicRate.feature:68
+  Given I have a health calculator                     # healthcalc.bdd.StepDefinitions.i_have_a_health_calculator()
+  And a weight of 70 kg                                # healthcalc.bdd.StepDefinitions.a_weight_of_kg(float)
+  And a height of 175 cm                               # healthcalc.bdd.StepDefinitions.a_height_of_cm(int)
+  And an age of 120 years                              # healthcalc.bdd.StepDefinitions.an_age_of_years(int)
+  And a male gender                                    # healthcalc.bdd.StepDefinitions.a_male_gender()
+  When I compute the basal metabolic rate              # healthcalc.bdd.StepDefinitions.i_compute_the_basal_metabolic_rate()
+  Then The system throws an error of invalid parameter # healthcalc.bdd.StepDefinitions.the_system_throws_an_error_of_invalid_parameter()
+
+@tag @tag4
+Scenario Outline: Out of range age                     # healthcalc/BasalMetabolicRate.feature:69
+  Given I have a health calculator                     # healthcalc.bdd.StepDefinitions.i_have_a_health_calculator()
+  And a weight of 70 kg                                # healthcalc.bdd.StepDefinitions.a_weight_of_kg(float)
+  And a height of 175 cm                               # healthcalc.bdd.StepDefinitions.a_height_of_cm(int)
+  And an age of 120 years                              # healthcalc.bdd.StepDefinitions.an_age_of_years(int)
+  And a male gender                                    # healthcalc.bdd.StepDefinitions.a_male_gender()
+  When I compute the basal metabolic rate              # healthcalc.bdd.StepDefinitions.i_compute_the_basal_metabolic_rate()
+  Then The system throws an error of invalid parameter # healthcalc.bdd.StepDefinitions.the_system_throws_an_error_of_invalid_parameter()
+
+@tag @tag5
+Scenario Outline: Unknown gender                       # healthcalc/BasalMetabolicRate.feature:83
+  Given I have a health calculator                     # healthcalc.bdd.StepDefinitions.i_have_a_health_calculator()
+  And a weight of 70 kg                                # healthcalc.bdd.StepDefinitions.a_weight_of_kg(float)
+  And a height of 175 cm                               # healthcalc.bdd.StepDefinitions.a_height_of_cm(int)
+  And an age of 30 years                               # healthcalc.bdd.StepDefinitions.an_age_of_years(int)
+  And an unknown gender                                # healthcalc.bdd.StepDefinitions.an_unknown_gender()
+  When I compute the basal metabolic rate              # healthcalc.bdd.StepDefinitions.i_compute_the_basal_metabolic_rate()
+  Then The system throws an error of invalid parameter # healthcalc.bdd.StepDefinitions.the_system_throws_an_error_of_invalid_parameter()
+
+@tag @tag5
+Scenario Outline: Unknown gender                       # healthcalc/BasalMetabolicRate.feature:84
+  Given I have a health calculator                     # healthcalc.bdd.StepDefinitions.i_have_a_health_calculator()
+  And a weight of 70 kg                                # healthcalc.bdd.StepDefinitions.a_weight_of_kg(float)
+  And a height of 175 cm                               # healthcalc.bdd.StepDefinitions.a_height_of_cm(int)
+  And an age of 30 years                               # healthcalc.bdd.StepDefinitions.an_age_of_years(int)
+  And an unknown gender                                # healthcalc.bdd.StepDefinitions.an_unknown_gender()
+  When I compute the basal metabolic rate              # healthcalc.bdd.StepDefinitions.i_compute_the_basal_metabolic_rate()
+  Then The system throws an error of invalid parameter # healthcalc.bdd.StepDefinitions.the_system_throws_an_error_of_invalid_parameter()
+
+@tag @tag5
+Scenario Outline: Unknown gender                       # healthcalc/BasalMetabolicRate.feature:85
+  Given I have a health calculator                     # healthcalc.bdd.StepDefinitions.i_have_a_health_calculator()
+  And a weight of 70 kg                                # healthcalc.bdd.StepDefinitions.a_weight_of_kg(float)
+  And a height of 175 cm                               # healthcalc.bdd.StepDefinitions.a_height_of_cm(int)
+  And an age of 30 years                               # healthcalc.bdd.StepDefinitions.an_age_of_years(int)
+  And an unknown gender                                # healthcalc.bdd.StepDefinitions.an_unknown_gender()
+  When I compute the basal metabolic rate              # healthcalc.bdd.StepDefinitions.i_compute_the_basal_metabolic_rate()
+  Then The system throws an error of invalid parameter # healthcalc.bdd.StepDefinitions.the_system_throws_an_error_of_invalid_parameter()
+
+@tag @tag1
+Scenario Outline: Computing my ideal weight # healthcalc/IdealWeight.feature:15
+  Given I have a health calculator          # healthcalc.bdd.StepDefinitions.i_have_a_health_calculator()
+  And a height of 165 cm                    # healthcalc.bdd.StepDefinitions.a_height_of_cm(int)
+  And a female gender                       # healthcalc.bdd.StepDefinitions.a_female_gender()
+  When I compute the ideal weight           # healthcalc.bdd.StepDefinitions.i_compute_the_ideal_weight()
+  Then The system returns 59 kg             # healthcalc.bdd.StepDefinitions.the_system_returns_kg(double)
+
+@tag @tag1
+Scenario Outline: Computing my ideal weight # healthcalc/IdealWeight.feature:16
+  Given I have a health calculator          # healthcalc.bdd.StepDefinitions.i_have_a_health_calculator()
+  And a height of 165 cm                    # healthcalc.bdd.StepDefinitions.a_height_of_cm(int)
+  And a female gender                       # healthcalc.bdd.StepDefinitions.a_female_gender()
+  When I compute the ideal weight           # healthcalc.bdd.StepDefinitions.i_compute_the_ideal_weight()
+  Then The system returns 59 kg             # healthcalc.bdd.StepDefinitions.the_system_returns_kg(double)
+
+@tag @tag1
+Scenario Outline: Computing my ideal weight # healthcalc/IdealWeight.feature:17
+  Given I have a health calculator          # healthcalc.bdd.StepDefinitions.i_have_a_health_calculator()
+  And a height of 165 cm                    # healthcalc.bdd.StepDefinitions.a_height_of_cm(int)
+  And a female gender                       # healthcalc.bdd.StepDefinitions.a_female_gender()
+  When I compute the ideal weight           # healthcalc.bdd.StepDefinitions.i_compute_the_ideal_weight()
+  Then The system returns 59 kg             # healthcalc.bdd.StepDefinitions.the_system_returns_kg(double)
+
+@tag @tag1
+Scenario Outline: Computing my ideal weight # healthcalc/IdealWeight.feature:18
+  Given I have a health calculator          # healthcalc.bdd.StepDefinitions.i_have_a_health_calculator()
+  And a height of 165 cm                    # healthcalc.bdd.StepDefinitions.a_height_of_cm(int)
+  And a female gender                       # healthcalc.bdd.StepDefinitions.a_female_gender()
+  When I compute the ideal weight           # healthcalc.bdd.StepDefinitions.i_compute_the_ideal_weight()
+  Then The system returns 59 kg             # healthcalc.bdd.StepDefinitions.the_system_returns_kg(double)
+
+@tag @tag1
+Scenario Outline: Computing my ideal weight # healthcalc/IdealWeight.feature:19
+  Given I have a health calculator          # healthcalc.bdd.StepDefinitions.i_have_a_health_calculator()
+  And a height of 165 cm                    # healthcalc.bdd.StepDefinitions.a_height_of_cm(int)
+  And a female gender                       # healthcalc.bdd.StepDefinitions.a_female_gender()
+  When I compute the ideal weight           # healthcalc.bdd.StepDefinitions.i_compute_the_ideal_weight()
+  Then The system returns 59 kg             # healthcalc.bdd.StepDefinitions.the_system_returns_kg(double)
+
+@tag @tag1
+Scenario Outline: Computing my ideal weight # healthcalc/IdealWeight.feature:20
+  Given I have a health calculator          # healthcalc.bdd.StepDefinitions.i_have_a_health_calculator()
+  And a height of 165 cm                    # healthcalc.bdd.StepDefinitions.a_height_of_cm(int)
+  And a female gender                       # healthcalc.bdd.StepDefinitions.a_female_gender()
+  When I compute the ideal weight           # healthcalc.bdd.StepDefinitions.i_compute_the_ideal_weight()
+  Then The system returns 59 kg             # healthcalc.bdd.StepDefinitions.the_system_returns_kg(double)
+
+@tag @tag2
+Scenario Outline: Negative height                      # healthcalc/IdealWeight.feature:34
+  Given I have a health calculator                     # healthcalc.bdd.StepDefinitions.i_have_a_health_calculator()
+  And a negative height -170 cm                        # healthcalc.bdd.StepDefinitions.a_negative_height_cm(int)
+  And a male gender                                    # healthcalc.bdd.StepDefinitions.a_male_gender()
+  When I compute the ideal weight                      # healthcalc.bdd.StepDefinitions.i_compute_the_ideal_weight()
+  Then The system throws an error of invalid parameter # healthcalc.bdd.StepDefinitions.the_system_throws_an_error_of_invalid_parameter()
+
+@tag @tag2
+Scenario Outline: Negative height                      # healthcalc/IdealWeight.feature:35
+  Given I have a health calculator                     # healthcalc.bdd.StepDefinitions.i_have_a_health_calculator()
+  And a negative height -170 cm                        # healthcalc.bdd.StepDefinitions.a_negative_height_cm(int)
+  And a male gender                                    # healthcalc.bdd.StepDefinitions.a_male_gender()
+  When I compute the ideal weight                      # healthcalc.bdd.StepDefinitions.i_compute_the_ideal_weight()
+  Then The system throws an error of invalid parameter # healthcalc.bdd.StepDefinitions.the_system_throws_an_error_of_invalid_parameter()
+
+@tag @tag2
+Scenario Outline: Negative height                      # healthcalc/IdealWeight.feature:36
+  Given I have a health calculator                     # healthcalc.bdd.StepDefinitions.i_have_a_health_calculator()
+  And a negative height -170 cm                        # healthcalc.bdd.StepDefinitions.a_negative_height_cm(int)
+  And a male gender                                    # healthcalc.bdd.StepDefinitions.a_male_gender()
+  When I compute the ideal weight                      # healthcalc.bdd.StepDefinitions.i_compute_the_ideal_weight()
+  Then The system throws an error of invalid parameter # healthcalc.bdd.StepDefinitions.the_system_throws_an_error_of_invalid_parameter()
+
+@tag @tag2
+Scenario Outline: Negative height                      # healthcalc/IdealWeight.feature:37
+  Given I have a health calculator                     # healthcalc.bdd.StepDefinitions.i_have_a_health_calculator()
+  And a negative height -170 cm                        # healthcalc.bdd.StepDefinitions.a_negative_height_cm(int)
+  And a male gender                                    # healthcalc.bdd.StepDefinitions.a_male_gender()
+  When I compute the ideal weight                      # healthcalc.bdd.StepDefinitions.i_compute_the_ideal_weight()
+  Then The system throws an error of invalid parameter # healthcalc.bdd.StepDefinitions.the_system_throws_an_error_of_invalid_parameter()
+
+@tag @tag2
+Scenario Outline: Negative height                      # healthcalc/IdealWeight.feature:38
+  Given I have a health calculator                     # healthcalc.bdd.StepDefinitions.i_have_a_health_calculator()
+  And a negative height -170 cm                        # healthcalc.bdd.StepDefinitions.a_negative_height_cm(int)
+  And a male gender                                    # healthcalc.bdd.StepDefinitions.a_male_gender()
+  When I compute the ideal weight                      # healthcalc.bdd.StepDefinitions.i_compute_the_ideal_weight()
+  Then The system throws an error of invalid parameter # healthcalc.bdd.StepDefinitions.the_system_throws_an_error_of_invalid_parameter()
+
+@tag @tag2
+Scenario Outline: Negative height                      # healthcalc/IdealWeight.feature:39
+  Given I have a health calculator                     # healthcalc.bdd.StepDefinitions.i_have_a_health_calculator()
+  And a negative height -170 cm                        # healthcalc.bdd.StepDefinitions.a_negative_height_cm(int)
+  And a male gender                                    # healthcalc.bdd.StepDefinitions.a_male_gender()
+  When I compute the ideal weight                      # healthcalc.bdd.StepDefinitions.i_compute_the_ideal_weight()
+  Then The system throws an error of invalid parameter # healthcalc.bdd.StepDefinitions.the_system_throws_an_error_of_invalid_parameter()
+
+@tag @tag3
+Scenario Outline: Out of range height                  # healthcalc/IdealWeight.feature:53
+  Given I have a health calculator                     # healthcalc.bdd.StepDefinitions.i_have_a_health_calculator()
+  And a height of 300 cm                               # healthcalc.bdd.StepDefinitions.a_height_of_cm(int)
+  And a male gender                                    # healthcalc.bdd.StepDefinitions.a_male_gender()
+  When I compute the ideal weight                      # healthcalc.bdd.StepDefinitions.i_compute_the_ideal_weight()
+  Then The system throws an error of invalid parameter # healthcalc.bdd.StepDefinitions.the_system_throws_an_error_of_invalid_parameter()
+
+@tag @tag3
+Scenario Outline: Out of range height                  # healthcalc/IdealWeight.feature:54
+  Given I have a health calculator                     # healthcalc.bdd.StepDefinitions.i_have_a_health_calculator()
+  And a height of 300 cm                               # healthcalc.bdd.StepDefinitions.a_height_of_cm(int)
+  And a male gender                                    # healthcalc.bdd.StepDefinitions.a_male_gender()
+  When I compute the ideal weight                      # healthcalc.bdd.StepDefinitions.i_compute_the_ideal_weight()
+  Then The system throws an error of invalid parameter # healthcalc.bdd.StepDefinitions.the_system_throws_an_error_of_invalid_parameter()
+
+@tag @tag3
+Scenario Outline: Out of range height                  # healthcalc/IdealWeight.feature:55
+  Given I have a health calculator                     # healthcalc.bdd.StepDefinitions.i_have_a_health_calculator()
+  And a height of 300 cm                               # healthcalc.bdd.StepDefinitions.a_height_of_cm(int)
+  And a male gender                                    # healthcalc.bdd.StepDefinitions.a_male_gender()
+  When I compute the ideal weight                      # healthcalc.bdd.StepDefinitions.i_compute_the_ideal_weight()
+  Then The system throws an error of invalid parameter # healthcalc.bdd.StepDefinitions.the_system_throws_an_error_of_invalid_parameter()
+
+@tag @tag3
+Scenario Outline: Out of range height                  # healthcalc/IdealWeight.feature:56
+  Given I have a health calculator                     # healthcalc.bdd.StepDefinitions.i_have_a_health_calculator()
+  And a height of 300 cm                               # healthcalc.bdd.StepDefinitions.a_height_of_cm(int)
+  And a male gender                                    # healthcalc.bdd.StepDefinitions.a_male_gender()
+  When I compute the ideal weight                      # healthcalc.bdd.StepDefinitions.i_compute_the_ideal_weight()
+  Then The system throws an error of invalid parameter # healthcalc.bdd.StepDefinitions.the_system_throws_an_error_of_invalid_parameter()
+
+@tag @tag4
+Scenario Outline: Unknown gender                       # healthcalc/IdealWeight.feature:69
+  Given I have a health calculator                     # healthcalc.bdd.StepDefinitions.i_have_a_health_calculator()
+  And a height of 170 cm                               # healthcalc.bdd.StepDefinitions.a_height_of_cm(int)
+  And an unknown gender                                # healthcalc.bdd.StepDefinitions.an_unknown_gender()
+  When I compute the ideal weight                      # healthcalc.bdd.StepDefinitions.i_compute_the_ideal_weight()
+  Then The system throws an error of invalid parameter # healthcalc.bdd.StepDefinitions.the_system_throws_an_error_of_invalid_parameter()
+
+@tag @tag4
+Scenario Outline: Unknown gender                       # healthcalc/IdealWeight.feature:70
+  Given I have a health calculator                     # healthcalc.bdd.StepDefinitions.i_have_a_health_calculator()
+  And a height of 170 cm                               # healthcalc.bdd.StepDefinitions.a_height_of_cm(int)
+  And an unknown gender                                # healthcalc.bdd.StepDefinitions.an_unknown_gender()
+  When I compute the ideal weight                      # healthcalc.bdd.StepDefinitions.i_compute_the_ideal_weight()
+  Then The system throws an error of invalid parameter # healthcalc.bdd.StepDefinitions.the_system_throws_an_error_of_invalid_parameter()
+
+@tag @tag4
+Scenario Outline: Unknown gender                       # healthcalc/IdealWeight.feature:71
+  Given I have a health calculator                     # healthcalc.bdd.StepDefinitions.i_have_a_health_calculator()
+  And a height of 170 cm                               # healthcalc.bdd.StepDefinitions.a_height_of_cm(int)
+  And an unknown gender                                # healthcalc.bdd.StepDefinitions.an_unknown_gender()
+  When I compute the ideal weight                      # healthcalc.bdd.StepDefinitions.i_compute_the_ideal_weight()
+  Then The system throws an error of invalid parameter # healthcalc.bdd.StepDefinitions.the_system_throws_an_error_of_invalid_parameter()
+[INFO] Tests run: 33, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.928 s - in healthcalc.bdd.RunCucumberTest
+[INFO] Running healthcalc.HealthCalcImplTest
+[INFO] Tests run: 18, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.138 s - in healthcalc.HealthCalcImplTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 51, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  6.730 s
+[INFO] Finished at: 2025-03-31T13:19:38+02:00
+[INFO] ------------------------------------------------------------------------
