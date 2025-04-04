@@ -153,8 +153,6 @@ Fuente: *[https://www.enterat.com/salud/imc-indice-masa-corporal.php](https://ww
 
 # Práctica 3
 
-### Author: hugosalascalderon@gmail.com
-
 ## Features
 
 ### Ideal Weight Computation
@@ -286,6 +284,39 @@ Then The system throws an error of invalid parameter
 
 
 
+# Práctica 4: Interfaz gráfica de usuario
+
+## Descripción
+
+En esta práctica se ha desarrollado una **interfaz gráfica de usuario (GUI)** para la calculadora de salud utilizando **Java Swing** y siguiendo el patrón de diseño **Modelo-Vista-Controlador (MVC)**. Se utilizó **WindowBuilder** como herramienta para el diseño visual de la interfaz.
+
+## Mockup 
+
+A continuación se muestra el prototipo de la interfaz diseñado previamente, que ha servido como base para el desarrollo de la GUI:
+
+![Mockup de la GUI](capturas/mockup.png)
+
+## Captura de pantalla de la interfaz implementada
+
+A continuación se muestra una captura de pantalla de la interfaz real desarrollada:
+
+![Captura de la interfaz](capturas/captura_gui.png)
+
+## Estructura del proyecto
+
+El proyecto está estructurado en los siguientes componentes:
+
+- **Modelo:** contiene la lógica de cálculo (por ejemplo, peso ideal, tasa metabólica basal).
+- **Vista:** interfaz gráfica desarrollada con Swing.
+- **Controlador:** conecta los eventos de la vista con la lógica del modelo.
+- **Main:** clase principal para ejecutar la aplicación.
+
+## Ejecución del archivo .jar
+
+Para ejecutar la aplicación en cualquier sistema con Java instalado:
+
+```bash
+java -jar miAplicacion.jar
 
 
 
