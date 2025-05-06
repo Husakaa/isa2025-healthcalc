@@ -1,6 +1,18 @@
 package healthcalc;
 
 public class HealthCalcImpl implements HealthCalc {
+	
+	// Aplicamos el patrón Singleton
+    private static HealthCalcImpl instancia;
+
+    private HealthCalcImpl() {}
+
+    public static HealthCalcImpl getInstance() {
+        if (instancia == null) {
+            instancia = new HealthCalcImpl();
+        }
+        return instancia;
+    }
 
     @Override
     public float idealWeight(int height, char gender) throws Exception {

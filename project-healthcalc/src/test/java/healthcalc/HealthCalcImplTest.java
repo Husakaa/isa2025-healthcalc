@@ -9,7 +9,7 @@ import org.junit.jupiter.api.Test;
 @DisplayName("Tests para la calculadora de salud.")
 public class HealthCalcImplTest {
 
-	private final HealthCalc healthCalc = new HealthCalcImpl(); // HealthCalcImpl implementa HealthCalc
+	private final HealthCalc healthCalc = HealthCalcImpl.getInstance(); // HealthCalcImpl implementa HealthCalc
 
     // Casos de prueba para Calculo del Peso Ideal - Formula de Lorentz (valido para 100cm <= alturas >= 250 cm)
     @Test
